@@ -2,6 +2,8 @@
 
 namespace App\Domain\Repositories;
 
+use Doctrine\Common\Collections;
+
 /**
  * VacancyRepository
  *
@@ -10,4 +12,12 @@ namespace App\Domain\Repositories;
  */
 class VacancyRepository extends \Doctrine\ORM\EntityRepository
 {
+    public function collectionOfElements()
+    {
+        $queryBuilder = $this->createQueryBuilder('u')
+            ->orderBy('u.id', 'ASC');
+
+        $colelction = new Collections\ArrayCollection($queryBuilder->getQuery()->getResult());
+        return $colelction;
+    }
 }

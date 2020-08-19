@@ -1,6 +1,5 @@
 <?php
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,4 +13,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::middleware('api')->get('vacancies/search', 'SearchController@search')->name('vacancies.search');
 Route::middleware('api')->resource('vacancies', 'ApiController');
