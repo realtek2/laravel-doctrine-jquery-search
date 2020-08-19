@@ -11,16 +11,5 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.webpackConfig({
-    module: {
-        rules: [
-            {
-                test: /fuelux\/js\/.*\.js$/,
-                use: ['imports-loader?define=>false']
-            }
-        ]
-    }
-});
-
-mix.js('resources/js/app.js', 'public/js/app')
+mix.js('resources/js/app.js', 'public/js')
 mix.sass('resources/sass/app.scss', 'public/css');

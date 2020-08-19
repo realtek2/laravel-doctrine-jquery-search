@@ -1,1 +1,29 @@
-//
+.navbar-laravel {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(255, 0, 0, 0.04);
+}
+  
+.main {
+    padding-top: 50px;
+}
+
+
+.bg-full {
+    position: relative;
+    padding-top: 30px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+  
+.bg-full:before {
+    content: 'My new work — here!';
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 20%;
+    transform: translateX( -50%);
+    height: 100%;
+    width: 100vw;
+    background: linear-gradient(270deg,#0288d1 0,#039be5 35%,#0ca5f0 85%);
+  }

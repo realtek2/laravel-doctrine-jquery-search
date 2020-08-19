@@ -23,6 +23,6 @@ class ApiController extends Controller
     {
         $item = EntityManager::find(Vacancy::class, $id);
         $item = $this->getItem($item, Vacancy::$fields);
-        return response()->json($item);
+        return view('show', compact('item'));
     }
 }
