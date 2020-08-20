@@ -42,7 +42,7 @@
             searching: true,  
             lengthChange: false,
             bStateSave: true,
-          
+            
             columns: [
               {data: 'id', 
               render: function ( data, type, row, meta ) {
@@ -53,6 +53,17 @@
               {data: 'company'},
               {data: 'createdAt'},
             ],
+            autoWidth: false,
+            columnDefs: [
+                {
+                    targets: ['_all'],
+                    className: 'mdc-data-table__cell'
+                }
+            ],
+            language: {
+                searchPlaceholder: "Enter position...",
+                search: "",
+            },
             ordering: false,
         });
     });
